@@ -2,7 +2,7 @@ import Logo from '../../../assets/images/logo.png';
 
 const Header = () => (
     <header className='justify-between sticky top-0 w-full flex items-center z-10 pt-[35px] pb-[15px]'>
-        <div className='px-[5.3rem] flex items-center justify-between w-full max-w-[1530px] mx-auto'>
+        <div className='px-[5.3rem] hidden xl:flex items-center justify-between w-full max-w-[1530px] mx-auto'>
             <nav className='text-[1.4rem] flex flex-1 justify-start gap-8'>
                 <ul className='flex'>
                     <li className='mr-[3.2rem]'>

@@ -69,6 +69,7 @@ h1 {
     height: 1000px;
     font-size: 100%;
     width: 1000px;
+    max-width: 100%;
     margin: 60px auto 0px auto;
     z-index: 3;
     position: relative;
@@ -88,6 +89,7 @@ h1 {
     font-size: 2.1rem;
     line-height: 100%;
     text-align: center;
+    padding: 0 2.5rem;
 }
 
 .round-btn {
@@ -154,4 +156,14 @@ h1 {
     z-index: 4;
     width: 300px;
     margin: auto;
+}
+
+.slick-track {
+    padding: 20px 0px;
+}
+.slick-dots li button:before {
+    transition: 0.4s color ease-in-out;
+}
+.slick-dots li.slick-active button:before {
+    color: #27b0e6 !important;
 }
