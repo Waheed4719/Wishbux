@@ -14,12 +14,12 @@ import {
     circleAnim
 } from '../../utils/Animations';
 
-const Section1 = () => (
+const Hero = () => (
     <section className='section-1'>
         <div className='main-block'>
             <h1>
                 Turn your wishes <br />
-                <span className='coloured'>into cash</span>
+                <span className='coloured leading-[1.3]'>into cash</span>
             </h1>
             <div className='main-block__text'>
                 Receive cash gifts privately, securely and without any fees
@@ -101,4 +101,4 @@ const Section1 = () => (
     </section>
 );
 
-export default Section1;
+export default Hero;
