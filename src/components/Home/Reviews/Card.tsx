@@ -25,7 +25,7 @@ const ReviewCard = () => (
                     ))}
             </div>
             <div className='w-full'>
-                <p className='text-justify font-bold text-[1.4rem]'>
+                <p className='text-justify font-medium text-[1.4rem]'>
                     {`"This has been the best wishlist site that I have ever used. Even
                                 when problems come up with items or shipping, I've always been able
                                 to reach out and get the issue resolved very quickly. Highly

@@ -1,14 +1,23 @@
 import { motion } from 'framer-motion';
 import {
+    shoeAnim2,
     sentenceAnim,
     howItWorksListVariants,
-    howItWorksListItemVariants
+    howItWorksListItemVariants,
+    guyAnim,
+    girlAnim,
+    phoneAnim,
+    logoAnim
 } from '../../utils/Animations';
 import MiniLogo from '../../assets/images/mini-logo.png';
 import Heart from '../../assets/images/heart.svg';
 import Money from '../../assets/images/money.svg';
 import Microphone from '../../assets/images/microphone.svg';
 import PeopleLock from '../../assets/images/people-lock.svg';
+import ShoeImage from '../../assets/images/shoe.png';
+import GirlImage from '../../assets/images/girl.png';
+import GuyImage from '../../assets/images/man.png';
+import IphoneImage from '../../assets/images/phone.png';
 
 const words = ['A', 'free', 'and', 'simple', 'way', 'to', 'share', 'your', 'wishlists'];
 
@@ -43,7 +52,7 @@ const features: FeatureItemType[] = [
 
 const Features = () => (
     <section className='section-2 bg-[var(--bg-primary)] py-[100px] relative w-full'>
-        <div className='max-w-full w-[1310px] p-[20px] mx-auto'>
+        <div className='max-w-full w-[1310px] px-[5rem] mx-auto'>
             <div className='mx-auto flex flex-col-reverse lg:flex-row gap-[4rem] lg:gap-0'>
                 <div className='w-full'>
                     <div className='text-start mx-auto mb-[1rem]'>
@@ -84,7 +93,7 @@ const Features = () => (
                                 </div>
 
                                 <div className='flex flex-col items-start'>
-                                    <motion.h3 className='text-[#2f415b] text-[1.6rem] font-[900] leading-[1.1] text-start'>
+                                    <motion.h3 className='text-[#2f415b] text-[1.9rem] font-[900] leading-[1.1] text-start'>
                                         {feature.title}
                                     </motion.h3>
                                     <motion.p className='text-[#2f415b] text-[1.5rem] font-[500] leading-[1.1] mt-3'>
@@ -96,7 +105,7 @@ const Features = () => (
                     </motion.ul>
                 </div>
 
-                <div className='relative w-full lg:w-[50%] before:pt-[100%] before:content-[""] mx-auto before:block max-w-[55rem]'>
+                <div className='relative w-full before:pt-[100%] before:content-[""] mx-auto before:block max-w-[55rem]'>
                     <div className='absolute top-0 left-0 h-full w-full z-0'>
                         <motion.svg
                             className='mx-auto w-full h-full'
@@ -146,9 +155,9 @@ const Features = () => (
                             />
                         </motion.svg>
                     </div>
-                    <div className='absolute flex items-center justify-center top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[20%]'>
+                    <div className='absolute flex items-center justify-center top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[30%]'>
                         <svg
-                            className='w-[80%] absolute top-[-38%] left-[18%] transform -translate-x-1/2 -translate-y-1/2'
+                            className='w-[66%] absolute top-[-65%] left-[-10%] '
                             viewBox='0 0 128 124'
                             fill='none'
                             xmlns='http://www.w3.org/2000/svg'
@@ -160,7 +169,7 @@ const Features = () => (
                         </svg>
 
                         <svg
-                            className='w-[80%] absolute bottom-[-110%] right-[-68%] transform -translate-x-1/2 -translate-y-1/2'
+                            className='w-[66%] absolute bottom-[-60%] right-[-15%]'
                             viewBox='0 0 102 127'
                             fill='none'
                             xmlns='http://www.w3.org/2000/svg'
@@ -170,8 +179,50 @@ const Features = () => (
                                 fill='#5EB8F4'
                             />
                         </svg>
-                        <img src={MiniLogo} alt='mini-logo' className='w-full relative' />
+                        <div className='w-full relative before:pt-[100%] before:content-[""] before:block'>
+                            <motion.img
+                                variants={logoAnim}
+                                initial='initial'
+                                animate='animate'
+                                src={MiniLogo}
+                                alt='mini-logo'
+                                className='w-full absolute left-0 top-0'
+                            />
+                        </div>
                     </div>
+                    <motion.div
+                        initial='initial'
+                        animate='animate'
+                        variants={guyAnim}
+                        className='absolute w-[32%] rounded-full top-[12%] z-[3] left-[2%]  shadow-2xl'
+                    >
+                        <img className='w-full' src={GuyImage} alt='man' />
+                    </motion.div>
+
+                    <motion.div
+                        initial='initial'
+                        animate='animate'
+                        variants={girlAnim}
+                        className='absolute w-[32%] rounded-full bottom-[17%] z-[3] right-[-3%] shadow-2xl'
+                    >
+                        <img className='w-full' src={GirlImage} alt='girl' />
+                    </motion.div>
+                    <motion.div
+                        initial='initial'
+                        animate='animate'
+                        variants={shoeAnim2}
+                        className='absolute w-[43%] rounded-full top-[22%] z-[3] right-[2%]'
+                    >
+                        <img className='w-full' src={ShoeImage} alt='Shoe' />
+                    </motion.div>
+                    <motion.div
+                        initial='initial'
+                        animate='animate'
+                        variants={phoneAnim}
+                        className='absolute w-[40%] top-[50%] z-[3] left-[5%]'
+                    >
+                        <img className='w-full' src={IphoneImage} alt='Iphone' />
+                    </motion.div>
                 </div>
             </div>
         </div>

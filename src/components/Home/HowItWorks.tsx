@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import {
-    sentenceAnim,
-    listAnim,
+    textContainerVariant,
+    wordVariant,
     paraAnim,
     howItWorksListVariants,
     howItWorksListItemVariants
@@ -37,38 +37,56 @@ const howItWorks: HowItWorksItemType[] = [
 ];
 
 const HowItWorks = () => (
-    <section className='section-2 bg-white relative w-full pb-[40px]'>
-        <div className='w-[1310px] max-w-full p-[20px] mx-auto'>
+    <section className='section-2 bg-white relative w-full pb-[8rem]'>
+        <div className='w-[1310px] max-w-full px-[5rem] mx-auto'>
             <div className='text-start mx-auto mb-[1rem]'>
                 <h3 className=' text-center lg:text-left  text-[1.1rem] font-[500] text-[#c1aeb8] tracking-[2px]'>
                     HOW IT WORKS
                 </h3>
             </div>
-            <div className='mx-auto flex flex-col lg:flex-row gap-[40px] lg:gap-0'>
+            <div className='mx-auto flex flex-col lg:flex-row gap-[4rem] lg:gap-0'>
                 <div className='w-full max-w-full'>
                     <h2 className='text-center lg:text-left text-[#2f415b] text-[5.2rem] md:text-[7.2rem] font-black leading-[1.1]'>
-                        {words.slice(0, 7).map((word, index) => (
-                            <span key={word} className='overflow-hidden relative'>
+                        <motion.span
+                            variants={textContainerVariant}
+                            initial='hidden'
+                            animate='visible'
+                            style={{ overflow: 'hidden', display: 'block' }}
+                        >
+                            {words.slice(0, 4).map((word) => (
                                 <motion.span
-                                    variants={sentenceAnim(index * 0.5)}
-                                    initial='initial'
-                                    animate='animate'
-                                    className=' text-[#2f415b] tracking-[-2.5px] font-[900] transition-all'
+                                    key={word}
+                                    variants={wordVariant}
+                                    className=' text-[#2f415b] tracking-[-2.5px] font-[900] transition-all mr-[1.25rem] inline-flex'
                                 >
-                                    {word} {index !== words.length && ` `}
+                                    {word}
                                 </motion.span>
-                                {/* {(index === 3 || index === 6) && <br />} */}
-                                {index === 4 && ``}
-                            </span>
-                        ))}
-                        <br />
+                            ))}
+                        </motion.span>
+                        <motion.span
+                            variants={textContainerVariant}
+                            initial='hidden'
+                            animate='visible'
+                            style={{ overflow: 'hidden', display: 'block' }}
+                        >
+                            {words.slice(4, 7).map((word) => (
+                                <motion.span
+                                    key={word}
+                                    variants={wordVariant}
+                                    className=' text-[#2f415b] tracking-[-2.5px] font-[900] transition-all mr-[1.25rem] inline-flex'
+                                >
+                                    {word}
+                                </motion.span>
+                            ))}
+                        </motion.span>
+
                         <span className='coloured transition-all leading-[1.1] text-[5.2rem] md:text-[7.2rem] tracking-[-2.5px] font-[900]'>{`${words[7]} ${words[8]}`}</span>
                     </h2>
                     <motion.p
                         variants={paraAnim}
                         initial='initial'
                         animate='animate'
-                        className='text-center lg:text-left text-[1.6rem] mt-[40px] text-[#afafb9]'
+                        className='text-center lg:text-left text-[1.6rem] mt-[4rem] text-[#afafb9]'
                     >
                         Lorem ipsum dolor sit amet consectetur. Etiam non <br />
                         nunc praesent iaculis suspendisse malesuada pretium.
