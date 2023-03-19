@@ -1,13 +1,8 @@
 import { motion } from 'framer-motion';
+import { CardPropType } from '../../../types';
 import { benefitItemAnim } from '../../../utils/Animations';
 
-type CardProps = {
-    title: string;
-    description: string;
-    icon: string;
-};
-
-const Card = ({ title, icon, description }: CardProps) => (
+const Card = ({ title, icon, description }: CardPropType) => (
     <motion.div
         variants={benefitItemAnim}
         key={title}

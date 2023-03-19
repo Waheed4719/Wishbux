@@ -17,24 +17,21 @@ const slides = [
     { id: 5, label: 'Slide 5' }
 ];
 
-const CustomDots = ({ activeIndex, onClick }: CustomDotsProps) => {
-    console.log(activeIndex, onClick);
-    return (
-        <ul className='flex justify-center items-center gap-4 py-[2rem] w-full'>
-            {slides.map((slide, index) => (
-                // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
-                <li
-                    // eslint-disable-next-line react/no-array-index-key
-                    key={slide.id}
-                    className={`rounded-full h-4 w-4 duration-[0.5s] ease-out ${
-                        index === activeIndex ? 'bg-[#27b0e6]' : 'bg-[#c4c9ce]'
-                    }`}
-                    onClick={() => onClick(index)}
-                />
-            ))}
-        </ul>
-    );
-};
+const CustomDots = ({ activeIndex, onClick }: CustomDotsProps) => (
+    <ul className='flex justify-center items-center gap-4 py-[2rem] w-full'>
+        {slides.map((slide, index) => (
+            // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+            <li
+                // eslint-disable-next-line react/no-array-index-key
+                key={slide.id}
+                className={`rounded-full h-4 w-4 duration-[0.5s] ease-out ${
+                    index === activeIndex ? 'bg-[#27b0e6]' : 'bg-[#c4c9ce]'
+                }`}
+                onClick={() => onClick(index)}
+            />
+        ))}
+    </ul>
+);
 const Reviews = () => {
     const [currentSlide, setCurrentSlide] = useState<number>(0);
     const settings = {
@@ -85,11 +82,9 @@ const Reviews = () => {
                             <span className='overflow-hidden relative'>What our creators say</span>
                         </h2>
                         <Slider {...settings}>
-                            {Array(5)
-                                .fill(0)
-                                .map(() => (
-                                    <ReviewCard />
-                                ))}
+                            {slides.map((slide) => (
+                                <ReviewCard key={slide.id} />
+                            ))}
                         </Slider>
                     </div>
                 </div>

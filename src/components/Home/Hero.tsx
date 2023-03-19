@@ -30,8 +30,8 @@ const Hero = () => (
 
             <div className='main-block__images-wrap'>
                 <div className='main-block__images'>
-                    <motion.div>
-                        <img className='w-full' src={bag} alt='bag' />
+                    <motion.div className='h-[198px]'>
+                        <img className='w-full' src={bag} alt='bag' loading='eager' />
                     </motion.div>
                     <div className='px-[35px]'>
                         <h3 className='text-[18px] font-bold leading-[1.3]'>
@@ -47,40 +47,40 @@ const Hero = () => (
                     </div>
                 </div>
                 <motion.div
-                    initial='initial'
-                    animate='animate'
+                    initial='hidden'
+                    animate='visible'
                     variants={shoeAnim}
                     className='absolute top-[-30px] z-[3] left-[-230px]'
                 >
                     <img className='h-[130px]' src={shoe} alt='shoe' />
                 </motion.div>
                 <motion.div
-                    initial='initial'
-                    animate='animate'
+                    initial='hidden'
+                    animate='visible'
                     variants={shadesAnim}
                     className='absolute top-[-40px] z-10 right-[-80px]'
                 >
                     <img className='h-[130px]' src={shades} alt='shades' />
                 </motion.div>
                 <motion.div
-                    initial='initial'
-                    animate='animate'
+                    initial='hidden'
+                    animate='visible'
                     variants={heelAnim}
                     className='absolute top-[120px] z-10 right-[-120px]'
                 >
                     <img className='h-[110px]' src={heels} alt='heels' />
                 </motion.div>
                 <motion.div
-                    initial='initial'
-                    animate='animate'
+                    initial='hidden'
+                    animate='visible'
                     variants={macbookAnim}
                     className='absolute bottom-[-50px] z-3 right-[-120px]'
                 >
                     <img className='h-[160px]' src={macbook} alt='macbook' />
                 </motion.div>
                 <motion.div
-                    initial='initial'
-                    animate='animate'
+                    initial='hidden'
+                    animate='visible'
                     variants={jewelryAnim}
                     className='absolute top-[170px] z-10 left-[-110px]'
                 >
@@ -89,8 +89,8 @@ const Hero = () => (
                 <motion.div
                     className='circleWrapper'
                     variants={circleAnim}
-                    initial='initial'
-                    animate='animate'
+                    initial='hidden'
+                    animate='visible'
                 >
                     <motion.div className='circle' />
                 </motion.div>

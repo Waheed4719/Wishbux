@@ -1,9 +1,9 @@
 const shadesAnim = {
-    initial: {
+    hidden: {
         opacity: 0,
         x: -30
     },
-    animate: {
+    visible: {
         opacity: 1,
         x: 0,
         transition: {
@@ -14,11 +14,11 @@ const shadesAnim = {
 };
 
 const shoeAnim = {
-    initial: {
+    hidden: {
         opacity: 0,
         x: 60
     },
-    animate: {
+    visible: {
         opacity: 1,
         x: 0,
         transition: {
@@ -29,11 +29,11 @@ const shoeAnim = {
 };
 
 const jewelryAnim = {
-    initial: {
+    hidden: {
         opacity: 0,
         x: 20
     },
-    animate: {
+    visible: {
         opacity: 1,
         x: 0,
         transition: {
@@ -44,11 +44,11 @@ const jewelryAnim = {
 };
 
 const macbookAnim = {
-    initial: {
+    hidden: {
         opacity: 0,
         x: -20
     },
-    animate: {
+    visible: {
         opacity: 1,
         x: 0,
         transition: {
@@ -59,11 +59,11 @@ const macbookAnim = {
 };
 
 const heelAnim = {
-    initial: {
+    hidden: {
         opacity: 0,
         x: -20
     },
-    animate: {
+    visible: {
         opacity: 1,
         x: 0,
         transition: {
@@ -74,13 +74,13 @@ const heelAnim = {
 };
 
 const circleAnim = {
-    initial: {
+    hidden: {
         opacity: 0,
         scale: 0,
         x: '-50%',
         y: '-50%'
     },
-    animate: {
+    visible: {
         opacity: 1,
         scale: 1,
         x: '-50%',
@@ -105,11 +105,11 @@ const sentenceAnim = (delay = 0.5) => ({
 });
 
 const paraAnim = {
-    initial: {
+    hidden: {
         opacity: 0,
         y: 20
     },
-    animate: {
+    visible: {
         opacity: 1,
         y: 0,
         transition: {
@@ -120,11 +120,11 @@ const paraAnim = {
 };
 
 const listAnim = {
-    initial: {
+    hidden: {
         opacity: 0,
         y: 40
     },
-    animate: {
+    visible: {
         opacity: 1,
         y: 0,
         transition: {
@@ -164,49 +164,49 @@ const howItWorksListItemVariants = {
 };
 
 const shoeAnim2 = {
-    initial: {
+    hidden: {
         opacity: 0,
         x: -60,
         y: 20,
         scale: 0.4
     },
-    animate: {
+    visible: {
         opacity: 1,
         x: 0,
         y: 0,
         scale: 1,
         transition: {
             duration: 0.5,
-            delay: 0.9
+            delay: 1.1
         }
     }
 };
 
 const phoneAnim = {
-    initial: {
+    hidden: {
         opacity: 0,
         x: 60,
         y: -20,
         scale: 0.4
     },
-    animate: {
+    visible: {
         opacity: 1,
         x: 0,
         y: 0,
         scale: 1,
         transition: {
             duration: 0.5,
-            delay: 1
+            delay: 1.2
         }
     }
 };
 
 const guyAnim = {
-    initial: {
+    hidden: {
         opacity: 0,
         scale: 0.6
     },
-    animate: {
+    visible: {
         opacity: 1,
         scale: 1,
         transition: {
@@ -216,27 +216,53 @@ const guyAnim = {
     }
 };
 
+const topArrowAnim = {
+    hidden: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            delay: 0.7
+        }
+    }
+};
+
+const bottomArrowAnim = {
+    hidden: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            delay: 0.9
+        }
+    }
+};
+
 const girlAnim = {
-    initial: {
+    hidden: {
         opacity: 0,
         scale: 0.6
     },
-    animate: {
+    visible: {
         opacity: 1,
         scale: 1,
         transition: {
             duration: 0.5,
-            delay: 0.8
+            delay: 1.0
         }
     }
 };
 
 const logoAnim = {
-    initial: {
+    hidden: {
         scale: 0.5,
         opacity: 0
     },
-    animate: {
+    visible: {
         scale: 1,
         opacity: 1,
         transition: {
@@ -270,14 +296,25 @@ const textContainerVariant = {
         opacity: 1,
         transition: {
             duration: 0.2,
-            staggerChildren: 0.1,
+            staggerChildren: 0.05,
             delayChildren: 0.3
         }
     }
 };
 const wordVariant = {
-    hidden: { y: 50 },
-    visible: { y: 0, transition: { duration: 0.5 } }
+    hidden: { y: 80 },
+    visible: { y: 0, transition: { duration: 2, default: { ease: 'linear' } } }
+};
+
+const yourWishlistTextVariant = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5
+        }
+    }
 };
 
 export {
@@ -300,5 +337,8 @@ export {
     benefitContainerAnim,
     benefitItemAnim,
     textContainerVariant,
-    wordVariant
+    wordVariant,
+    topArrowAnim,
+    bottomArrowAnim,
+    yourWishlistTextVariant
 };
