@@ -1,7 +1,13 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Card from './Card';
-import { sentenceAnim, paraAnim, benefitContainerAnim } from '../../../utils/Animations';
+import {
+    textContainerVariant,
+    wordVariant,
+    paraAnim,
+    yourWishlistTextVariant,
+    benefitContainerAnim
+} from '../../../utils/Animations';
 import { benefitItems } from '../../../assets/dummyData';
 
 const words = ["What's", 'in', 'it', 'for', 'me'];
@@ -26,21 +32,30 @@ const Benefits = () => {
                             </h3>
                         </div>
                         <h2 className='text-center text-[#2f415b] text-[5.2rem] md:text-[7.2rem] font-black leading-[1.1]'>
-                            {words.slice(0, 3).map((word, index) => (
-                                <span key={word} className='overflow-hidden relative'>
+                            <motion.span
+                                variants={textContainerVariant}
+                                initial='hidden'
+                                animate={domEntered ? 'visible' : ''}
+                                style={{ overflow: 'hidden', display: 'block' }}
+                                className='block overflow-hidden opacity-0'
+                            >
+                                {words.slice(0, 3).map((word) => (
                                     <motion.span
-                                        variants={sentenceAnim(index * 0.5)}
-                                        initial='hidden'
-                                        animate={domEntered ? 'visible' : ''}
-                                        className=' text-[#2f415b] tracking-[-2.5px] font-[900] transition-all'
+                                        key={word}
+                                        variants={wordVariant}
+                                        className=' text-[#2f415b] tracking-[-2.5px] font-[900] mr-[1.25rem] inline-flex'
                                     >
-                                        {word} {index !== words.length && ` `}
+                                        {word}
                                     </motion.span>
-                                    {index === 4 && ``}
-                                </span>
-                            ))}
-                            <br />
-                            <span className='coloured  transition-all leading-[1.1] text-[5.2rem] md:text-[7.2rem] tracking-[-2.5px] font-[900]'>{`${words[3]} ${words[4]}`}</span>
+                                ))}
+                            </motion.span>
+
+                            <motion.span
+                                variants={yourWishlistTextVariant}
+                                initial='hidden'
+                                animate={domEntered ? 'visible' : ''}
+                                className='coloured transition-all leading-[1.1] text-[5.2rem] md:text-[7.2rem] tracking-[-2.5px] font-[900]'
+                            >{`${words[3]} ${words[4]}`}</motion.span>
                         </h2>
                         <motion.p
                             variants={paraAnim}
@@ -58,15 +73,14 @@ const Benefits = () => {
                         animate={domEntered ? 'visible' : ''}
                         className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '
                     >
-                        {domEntered &&
-                            benefitItems.map((item) => (
-                                <Card
-                                    key={item.title}
-                                    title={item.title}
-                                    description={item.description}
-                                    icon={item.icon}
-                                />
-                            ))}
+                        {benefitItems.map((item) => (
+                            <Card
+                                key={item.title}
+                                title={item.title}
+                                description={item.description}
+                                icon={item.icon}
+                            />
+                        ))}
                     </motion.div>
                 </div>
             </div>

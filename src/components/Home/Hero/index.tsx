@@ -1,25 +1,33 @@
 import { motion } from 'framer-motion';
-import bag from '../../assets/images/bag.png';
-import jewelry from '../../assets/images/jewelry.png';
-import shades from '../../assets/images/shades.png';
-import macbook from '../../assets/images/macbook.png';
-import heels from '../../assets/images/heels.png';
-import shoe from '../../assets/images/shoe.png';
+import bag from '../../../assets/images/bag.png';
+import jewelry from '../../../assets/images/jewelry.png';
+import shades from '../../../assets/images/shades.png';
+import macbook from '../../../assets/images/macbook.png';
+import heels from '../../../assets/images/heels.png';
+import shoe from '../../../assets/images/shoe.png';
 import {
     shoeAnim,
     heelAnim,
     shadesAnim,
     macbookAnim,
     jewelryAnim,
-    circleAnim
-} from '../../utils/Animations';
+    circleAnim,
+    yourWishlistTextVariant
+} from '../../../utils/Animations';
 
 const Hero = () => (
     <section className='section-1'>
         <div className='main-block'>
             <h1>
                 Turn your wishes <br />
-                <span className='coloured leading-[1.3]'>into cash</span>
+                <motion.span
+                    variants={yourWishlistTextVariant}
+                    initial='hidden'
+                    animate='visible'
+                    className='coloured transition-all leading-[1.1] text-[5.2rem] md:text-[7.2rem] tracking-[-2.5px] font-[900]'
+                >
+                    into cash
+                </motion.span>
             </h1>
             <div className='main-block__text'>
                 Receive cash gifts privately, securely and without any fees

@@ -11,7 +11,8 @@ import {
     phoneAnim,
     logoAnim,
     topArrowAnim,
-    bottomArrowAnim
+    bottomArrowAnim,
+    yourWishlistTextVariant
 } from '../../../utils/Animations';
 import { features } from '../../../assets/dummyData';
 import MiniLogo from '../../../assets/images/mini-logo.png';
@@ -79,7 +80,12 @@ const Features = () => {
                                 ))}
                             </motion.span>
 
-                            <span className='coloured transition-all leading-[1.1] text-[5.2rem] md:text-[7.2rem] tracking-[-2.5px] font-[900]'>{`${words[7]} ${words[8]}`}</span>
+                            <motion.span
+                                variants={yourWishlistTextVariant}
+                                initial='hidden'
+                                animate={domEntered ? 'visible' : ''}
+                                className='coloured transition-all leading-[1.1] text-[5.2rem] md:text-[7.2rem] tracking-[-2.5px] font-[900]'
+                            >{`${words[7]} ${words[8]}`}</motion.span>
                         </h2>
                         <motion.ul
                             variants={howItWorksListVariants}
