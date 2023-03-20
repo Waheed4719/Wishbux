@@ -5,7 +5,6 @@ import {
     textContainerVariant,
     wordVariant,
     paraAnim,
-    yourWishlistTextVariant,
     benefitContainerAnim
 } from '../../../utils/Animations';
 import { benefitItems } from '../../../utils/Constants';
@@ -49,13 +48,14 @@ const Benefits = () => {
                                     </motion.span>
                                 ))}
                             </motion.span>
-
-                            <motion.span
-                                variants={yourWishlistTextVariant}
-                                initial='hidden'
-                                animate={domEntered ? 'visible' : ''}
-                                className='coloured transition-all leading-[1.1] text-[5.2rem] md:text-[7.2rem] tracking-[-2.5px] font-[900]'
-                            >{`${words[3]} ${words[4]}`}</motion.span>
+                            <span className='overflow-hidden block'>
+                                <motion.span
+                                    variants={wordVariant}
+                                    initial='hidden'
+                                    animate={domEntered ? 'visible' : ''}
+                                    className='inline-flex coloured leading-[1.1] text-[5.2rem] md:text-[7.2rem] tracking-[-2.5px] font-[900]'
+                                >{`${words[3]} ${words[4]}`}</motion.span>
+                            </span>
                         </h2>
                         <motion.p
                             variants={paraAnim}

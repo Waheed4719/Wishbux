@@ -13,7 +13,7 @@ import {
     macbookAnim,
     jewelryAnim,
     circleAnim,
-    yourWishlistTextVariant
+    wordVariant
 } from '../../../utils/Animations';
 
 const Hero = () => {
@@ -33,7 +33,7 @@ const Hero = () => {
                 <h1>
                     Turn your wishes <br />
                     <motion.span
-                        variants={yourWishlistTextVariant}
+                        variants={wordVariant}
                         initial='hidden'
                         animate='visible'
                         className='coloured transition-all leading-[1.1] text-[5.2rem] md:text-[7.2rem] tracking-[-2.5px] font-[900]'

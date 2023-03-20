@@ -306,22 +306,6 @@ const wordVariant = {
     visible: { y: 0, transition: { duration: 1 } }
 };
 
-const yourWishlistTextVariant = {
-    hidden: {
-        opacity: 0,
-        y: 100
-    },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            delay: 0.5,
-            duration: 0.5,
-            ease: 'easeInOut'
-        }
-    }
-};
-
 export {
     shadesAnim,
     shoeAnim,
@@ -344,6 +328,5 @@ export {
     textContainerVariant,
     wordVariant,
     topArrowAnim,
-    bottomArrowAnim,
-    yourWishlistTextVariant
+    bottomArrowAnim
 };
