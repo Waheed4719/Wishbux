@@ -1,16 +1,16 @@
-import { CardPropType } from '../../types';
-import InfinityIcon from '../images/infinity.svg';
-import ChargeBackIcon from '../images/chargeback.svg';
-import CogsIcon from '../images/cogs.svg';
-import PeopleIcon from '../images/people.svg';
-import IdeaIcon from '../images/idea.svg';
-import HiddenIcon from '../images/hidden.svg';
-import HeartPlusIcon from '../images/heart-plus.svg';
-import DollarIcon from '../images/dollar.svg';
-import HeartIcon from '../images/heart.svg';
-import MoneyIcon from '../images/money.svg';
-import MicrophoneIcon from '../images/microphone.svg';
-import PeopleLockIcon from '../images/people-lock.svg';
+import { CardPropType } from '../types';
+import InfinityIcon from '../assets/images/infinity.svg';
+import ChargeBackIcon from '../assets/images/chargeback.svg';
+import CogsIcon from '../assets/images/cogs.svg';
+import PeopleIcon from '../assets/images/people.svg';
+import IdeaIcon from '../assets/images/idea.svg';
+import HiddenIcon from '../assets/images/hidden.svg';
+import HeartPlusIcon from '../assets/images/heart-plus.svg';
+import DollarIcon from '../assets/images/dollar.svg';
+import HeartIcon from '../assets/images/heart.svg';
+import MoneyIcon from '../assets/images/money.svg';
+import MicrophoneIcon from '../assets/images/microphone.svg';
+import PeopleLockIcon from '../assets/images/people-lock.svg';
 
 export const benefitItems: CardPropType[] = [
     {
@@ -88,5 +88,28 @@ export const features: CardPropType[] = [
         title: 'Two way anonymity',
         description: 'Your privacy is our privacy',
         icon: PeopleLockIcon
+    }
+];
+
+export const headerItems = [
+    {
+        id: 1,
+        title: 'How It Works',
+        href: '#howitworks'
+    },
+    {
+        id: 2,
+        title: 'Benefits',
+        href: '#benefits'
+    },
+    {
+        id: 3,
+        title: 'Features',
+        href: '#features'
+    },
+    {
+        id: 4,
+        title: 'Reviews',
+        href: '#reviews'
     }
 ];

@@ -8,7 +8,7 @@ import {
     yourWishlistTextVariant
 } from '../../../utils/Animations';
 import Card from './Card';
-import { howItWorks } from '../../../assets/dummyData';
+import { howItWorks } from '../../../utils/Constants';
 
 const words = ['A', 'free', 'and', 'simple', 'way', 'to', 'share', 'your', 'wishlists'];
 
@@ -25,7 +25,7 @@ const HowItWorks = () => {
 
     return (
         <section className='section-2 bg-white relative w-full pb-[8rem]'>
-            <div className='w-[1310px] max-w-full px-[5rem] mx-auto'>
+            <div className='w-[1310px] max-w-full px-[3rem] lg:px-[5rem] mx-auto'>
                 <div className='text-start mx-auto mb-[1rem]' ref={ref}>
                     <h3 className=' text-center lg:text-left  text-[1.1rem] font-[500] text-[#c1aeb8] tracking-[2px]'>
                         HOW IT WORKS

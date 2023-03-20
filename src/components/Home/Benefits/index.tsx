@@ -8,7 +8,7 @@ import {
     yourWishlistTextVariant,
     benefitContainerAnim
 } from '../../../utils/Animations';
-import { benefitItems } from '../../../assets/dummyData';
+import { benefitItems } from '../../../utils/Constants';
 
 const words = ["What's", 'in', 'it', 'for', 'me'];
 const Benefits = () => {
@@ -23,7 +23,7 @@ const Benefits = () => {
     }, [isInView]);
     return (
         <section className='section-2 bg-white py-[100px] relative w-full'>
-            <div className='max-w-full w-[1310px] px-[5rem] mx-auto'>
+            <div className='max-w-full w-[1310px] px-[3rem] lg:px-[5rem] mx-auto'>
                 <div className='mx-auto flex flex-col gap-[4rem] mb-[4rem]'>
                     <div className='w-full'>
                         <div className='text-start mx-auto mb-[1rem]' ref={ref}>
@@ -71,7 +71,7 @@ const Benefits = () => {
                         variants={benefitContainerAnim}
                         initial='hidden'
                         animate={domEntered ? 'visible' : ''}
-                        className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '
+                        className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem]'
                     >
                         {benefitItems.map((item) => (
                             <Card

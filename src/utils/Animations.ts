@@ -303,7 +303,7 @@ const textContainerVariant = {
 };
 const wordVariant = {
     hidden: { y: 80 },
-    visible: { y: 0, transition: { duration: 2, default: { ease: 'linear' } } }
+    visible: { y: 0, transition: { duration: 1 } }
 };
 
 const yourWishlistTextVariant = {

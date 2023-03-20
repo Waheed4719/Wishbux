@@ -6,7 +6,7 @@ const Card = ({ title, icon, description }: CardPropType) => (
     <motion.div
         variants={benefitItemAnim}
         key={title}
-        className='m-[1rem] flex flex-col items-start gap-[2rem] pb-[4.4rem] px-[3.7rem] pt-[3.7rem] w-[calc(33.333% - 2rem)])] bg-[rgba(237,240,246,0.56)] rounded-lg'
+        className='flex flex-col items-start gap-[2rem] pb-[4.4rem] px-[3.7rem] pt-[3.7rem] w-[calc(33.333% - 2rem)])] bg-[rgba(237,240,246,0.56)] rounded-lg'
     >
         <div className='w-[50px] h-[50px] bg-[#eceff4] rounded-lg flex items-center justify-center'>
             <img src={icon} alt={title} className='h-[35px] w-[35px]' />

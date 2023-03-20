@@ -14,7 +14,7 @@ import {
     bottomArrowAnim,
     yourWishlistTextVariant
 } from '../../../utils/Animations';
-import { features } from '../../../assets/dummyData';
+import { features } from '../../../utils/Constants';
 import MiniLogo from '../../../assets/images/mini-logo.png';
 import ShoeImage from '../../../assets/images/shoe.png';
 import GirlImage from '../../../assets/images/girl.png';
@@ -37,7 +37,7 @@ const Features = () => {
 
     return (
         <section className='section-2 bg-[var(--bg-primary)] py-[100px] relative w-full'>
-            <div className='max-w-full w-[1310px] px-[5rem] mx-auto'>
+            <div className='max-w-full w-[1310px] px-[3rem] lg:px-[5rem] mx-auto'>
                 <div className='mx-auto flex flex-col-reverse lg:flex-row gap-[4rem] lg:gap-0'>
                     <div className='w-full'>
                         <div className='text-start mx-auto mb-[1rem]' ref={ref}>
