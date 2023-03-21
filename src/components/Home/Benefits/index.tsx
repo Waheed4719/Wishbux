@@ -1,13 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Card from './Card';
-import {
-    textContainerVariant,
-    wordVariant,
-    paraAnim,
-    benefitContainerAnim
-} from '../../../utils/Animations';
+import { wordVariant, paraAnim, benefitContainerAnim } from '../../../utils/Animations';
 import { benefitItems } from '../../../utils/Constants';
+import AnimatedText from '../../common/AnimatedText';
 
 const words = ["What's", 'in', 'it', 'for', 'me'];
 const Benefits = () => {
@@ -31,23 +27,7 @@ const Benefits = () => {
                             </h3>
                         </div>
                         <h2 className='text-center text-[#2f415b] text-[5.2rem] md:text-[7.2rem] font-black leading-[1.1]'>
-                            <motion.span
-                                variants={textContainerVariant}
-                                initial='hidden'
-                                animate={domEntered ? 'visible' : ''}
-                                style={{ overflow: 'hidden', display: 'block' }}
-                                className='block overflow-hidden opacity-0'
-                            >
-                                {words.slice(0, 3).map((word) => (
-                                    <motion.span
-                                        key={word}
-                                        variants={wordVariant}
-                                        className=' text-[#2f415b] tracking-[-2.5px] font-[900] mr-[1.25rem] inline-flex'
-                                    >
-                                        {word}
-                                    </motion.span>
-                                ))}
-                            </motion.span>
+                            <AnimatedText words={words.slice(0, 3)} domEntered={domEntered} />
                             <span className='overflow-hidden block'>
                                 <motion.span
                                     variants={wordVariant}

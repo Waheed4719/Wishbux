@@ -1,8 +1,11 @@
-import { useState } from 'react';
 import Slider, { Settings } from 'react-slick';
-import ReviewCard from './Card';
+import { useState, useRef, useEffect } from 'react';
+import { motion, useInView } from 'framer-motion';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { textContainerVariant, wordVariant } from '../../../utils/Animations';
+import ReviewCard from './Card';
+import AnimatedText from '../../common/AnimatedText';
 
 interface CustomDotsProps extends Settings {
     activeIndex: number;
@@ -16,7 +19,7 @@ const slides = [
     { id: 4, label: 'Slide 4' },
     { id: 5, label: 'Slide 5' }
 ];
-
+const words = ['What', 'our', 'creators', 'say'];
 const CustomDots = ({ activeIndex, onClick }: CustomDotsProps) => (
     <ul className='flex justify-center items-center gap-4 py-[2rem] w-full'>
         {slides.map((slide, index) => (
@@ -33,6 +36,9 @@ const CustomDots = ({ activeIndex, onClick }: CustomDotsProps) => (
     </ul>
 );
 const Reviews = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref);
+    const [domEntered, setDomEntered] = useState<boolean>(false);
     const [currentSlide, setCurrentSlide] = useState<number>(0);
     const settings = {
         dots: true,
@@ -68,6 +74,12 @@ const Reviews = () => {
         }
     };
 
+    useEffect(() => {
+        if (isInView) {
+            setDomEntered(true);
+        }
+    }, [isInView]);
+
     return (
         <section className='section-2 bg-[var(--bg-primary)] py-[100px] relative w-full'>
             <div className='max-w-full w-[1310px] p-[3rem] mx-auto'>
@@ -78,8 +90,11 @@ const Reviews = () => {
                                 CUSTOMER REVIEWS
                             </h3>
                         </div>
-                        <h2 className='text-center text-[#2f415b] text-[5.2rem] md:text-[7.2rem] font-black leading-[1.1] mb-[2rem]'>
-                            <span className='overflow-hidden relative'>What our creators say</span>
+                        <h2
+                            className='text-center text-[#2f415b] text-[5.2rem] md:text-[7.2rem] font-black leading-[1.1] mb-[2rem]'
+                            ref={ref}
+                        >
+                            <AnimatedText words={words} domEntered={domEntered} />
                         </h2>
                         <Slider {...settings}>
                             {slides.map((slide) => (

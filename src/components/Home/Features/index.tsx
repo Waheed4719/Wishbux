@@ -11,7 +11,9 @@ import {
     phoneAnim,
     logoAnim,
     topArrowAnim,
-    bottomArrowAnim
+    bottomArrowAnim,
+    alertVariantLeft,
+    alertVariantRight
 } from '../../../utils/Animations';
 import { features } from '../../../utils/Constants';
 import MiniLogo from '../../../assets/images/mini-logo.png';
@@ -19,7 +21,11 @@ import ShoeImage from '../../../assets/images/shoe.png';
 import GirlImage from '../../../assets/images/girl.png';
 import GuyImage from '../../../assets/images/man.png';
 import IphoneImage from '../../../assets/images/phone.png';
+import giftIcon from '../../../assets/images/gift.svg';
+import bellIcon from '../../../assets/images/bell.svg';
 import Circle from './Circle';
+import AnimatedText from '../../common/AnimatedText';
+import Alert from '../../common/Alert';
 
 const words = ['A', 'free', 'and', 'simple', 'way', 'to', 'share', 'your', 'wishlists'];
 
@@ -45,40 +51,8 @@ const Features = () => {
                             </h3>
                         </div>
                         <h2 className='text-center lg:text-left text-[#2f415b] text-[5.2rem] md:text-[7.2rem] font-black leading-[1.1]'>
-                            <motion.span
-                                variants={textContainerVariant}
-                                initial='hidden'
-                                animate={domEntered ? 'visible' : ''}
-                                style={{ overflow: 'hidden', display: 'block' }}
-                                className='block overflow-hidden opacity-0'
-                            >
-                                {words.slice(0, 4).map((word) => (
-                                    <motion.span
-                                        key={word}
-                                        variants={wordVariant}
-                                        className=' text-[#2f415b] tracking-[-2.5px] font-[900] mr-[1.25rem] inline-flex'
-                                    >
-                                        {word}
-                                    </motion.span>
-                                ))}
-                            </motion.span>
-                            <motion.span
-                                variants={textContainerVariant}
-                                initial='hidden'
-                                animate={domEntered ? 'visible' : ''}
-                                className='block overflow-hidden opacity-0'
-                            >
-                                {words.slice(4, 7).map((word) => (
-                                    <motion.span
-                                        key={word}
-                                        variants={wordVariant}
-                                        className=' text-[#2f415b] tracking-[-2.5px] font-[900] mr-[1.25rem] inline-flex'
-                                    >
-                                        {word}
-                                    </motion.span>
-                                ))}
-                            </motion.span>
-
+                            <AnimatedText words={words.slice(0, 4)} domEntered={domEntered} />
+                            <AnimatedText words={words.slice(4, 7)} domEntered={domEntered} />
                             <span className='overflow-hidden block'>
                                 <motion.span
                                     variants={wordVariant}
@@ -196,6 +170,22 @@ const Features = () => {
                         >
                             <img className='w-full' src={IphoneImage} alt='Iphone' />
                         </motion.div>
+                        <Alert
+                            className='absolute top-[25%] left-[20%]'
+                            icon={giftIcon}
+                            iconBg='#ebf0f7'
+                            title='Your follower'
+                            description='Sent a gift'
+                            variants={alertVariantLeft}
+                        />
+                        <Alert
+                            className='absolute bottom-[27%] right-[20%]'
+                            icon={bellIcon}
+                            iconBg='#ebf0f7'
+                            title='You have a new payment'
+                            description='Payment Received'
+                            variants={alertVariantRight}
+                        />
                     </div>
                 </div>
             </div>

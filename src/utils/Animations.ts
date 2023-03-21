@@ -296,7 +296,7 @@ const textContainerVariant = {
         opacity: 1,
         transition: {
             duration: 0.2,
-            staggerChildren: 0.05,
+            staggerChildren: 0.1,
             delayChildren: 0.3
         }
     }
@@ -304,6 +304,16 @@ const textContainerVariant = {
 const wordVariant = {
     hidden: { y: 80 },
     visible: { y: 0, transition: { duration: 1 } }
+};
+
+const alertVariantLeft = {
+    hidden: { x: 80, opactiy: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 1, delay: 0.7 } }
+};
+
+const alertVariantRight = {
+    hidden: { opactiy: 0, x: -80 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1, delay: 0.7 } }
 };
 
 export {
@@ -328,5 +338,7 @@ export {
     textContainerVariant,
     wordVariant,
     topArrowAnim,
-    bottomArrowAnim
+    bottomArrowAnim,
+    alertVariantLeft,
+    alertVariantRight
 };

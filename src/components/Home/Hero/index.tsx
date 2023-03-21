@@ -6,6 +6,9 @@ import shades from '../../../assets/images/shades.png';
 import macbook from '../../../assets/images/macbook.png';
 import heels from '../../../assets/images/heels.png';
 import shoe from '../../../assets/images/shoe.png';
+import dollarIcon from '../../../assets/images/dollar.svg';
+import dollarBlueIcon from '../../../assets/images/dollar-blue.svg';
+import bellIcon from '../../../assets/images/bell.svg';
 import {
     shoeAnim,
     heelAnim,
@@ -13,8 +16,12 @@ import {
     macbookAnim,
     jewelryAnim,
     circleAnim,
-    wordVariant
+    wordVariant,
+    alertVariantLeft,
+    alertVariantRight
 } from '../../../utils/Animations';
+
+import Alert from '../../common/Alert';
 
 const Hero = () => {
     const ref = useRef(null);
@@ -66,6 +73,7 @@ const Hero = () => {
                             </button>
                         </div>
                     </div>
+
                     <motion.div
                         initial='hidden'
                         animate={domEntered ? 'visible' : ''}
@@ -114,6 +122,24 @@ const Hero = () => {
                     >
                         <motion.div className='circle' />
                     </motion.div>
+
+                    <Alert
+                        className='absolute top-[25%] left-[-20%]'
+                        icon={dollarBlueIcon}
+                        iconBg='#ebf0f7'
+                        title='Account Balance'
+                        description='$1340'
+                        variants={alertVariantLeft}
+                    />
+
+                    <Alert
+                        className='absolute bottom-[25%] right-[-20%]'
+                        icon={bellIcon}
+                        iconBg='#f3faf1'
+                        title='New Alert'
+                        description='Payment Received'
+                        variants={alertVariantRight}
+                    />
                 </div>
             </div>
 
