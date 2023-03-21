@@ -152,9 +152,16 @@ h1 {
     box-shadow: 0px 12.0047px 20.5794px rgba(0, 0, 0, 0.15);
     -webkit-border-radius: 17.1495px;
     border-radius: 17.1495px;
-    position: relative;
-    z-index: 4;
     width: 300px;
+    margin: auto;
+}
+
+.main-block__images_new {
+    padding: 1rem 0 0.8rem;
+    background: #ffffff;
+    border: 0.857476px solid #ffffff;
+    -webkit-box-shadow: 0px 12.0047px 20.5794px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 12.0047px 20.5794px rgba(0, 0, 0, 0.15);
     margin: auto;
 }
 

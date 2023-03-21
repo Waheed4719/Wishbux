@@ -27,8 +27,8 @@ const Alert = ({ icon, iconBg, title, description, variants, className }: AlertP
             <img className='h-6 w-6' src={icon} alt='alert-icon' />
         </div>
         <div className='pr-4'>
-            <p className='font-light text-[1rem]'>{title}</p>
-            <p className='font-bold text-[1.2rem]'>{description}</p>
+            <p className='font-light text-left text-[1rem]'>{title}</p>
+            <p className='font-bold text-left text-[1.2rem]'>{description}</p>
         </div>
     </motion.div>
 );

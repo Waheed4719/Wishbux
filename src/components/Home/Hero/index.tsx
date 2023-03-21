@@ -6,7 +6,6 @@ import shades from '../../../assets/images/shades.png';
 import macbook from '../../../assets/images/macbook.png';
 import heels from '../../../assets/images/heels.png';
 import shoe from '../../../assets/images/shoe.png';
-import dollarIcon from '../../../assets/images/dollar.svg';
 import dollarBlueIcon from '../../../assets/images/dollar-blue.svg';
 import bellIcon from '../../../assets/images/bell.svg';
 import {
@@ -56,7 +55,7 @@ const Hero = () => {
                 </button>
 
                 <div className='main-block__images-wrap'>
-                    <div className='main-block__images'>
+                    <div className='main-block__images relative z-[4]'>
                         <motion.div className='h-[198px]' ref={ref}>
                             <img className='w-full' src={bag} alt='bag' loading='eager' />
                         </motion.div>

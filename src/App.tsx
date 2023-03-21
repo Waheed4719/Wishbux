@@ -7,6 +7,7 @@ import Footer from './components/Home/Footer';
 import Reviews from './components/Home/Reviews/index';
 import Benefits from './components/Home/Benefits';
 import Drawer from './components/Home/Drawer';
+import EarlyAccess from './components/Home/EarlyAccess';
 
 export default () => (
     <div className='App'>
@@ -16,6 +17,7 @@ export default () => (
         <Features />
         <Benefits />
         <Reviews />
+        <EarlyAccess />
         <Footer />
         <Drawer />
     </div>

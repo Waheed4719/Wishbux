@@ -26,6 +26,7 @@ import bellIcon from '../../../assets/images/bell.svg';
 import Circle from './Circle';
 import AnimatedText from '../../common/AnimatedText';
 import Alert from '../../common/Alert';
+import ListItem from './ListItem';
 
 const words = ['A', 'free', 'and', 'simple', 'way', 'to', 'share', 'your', 'wishlists'];
 
@@ -68,28 +69,11 @@ const Features = () => {
                             animate={domEntered ? 'visible' : ''}
                         >
                             {features.map((feature) => (
-                                <motion.li
-                                    key={feature.title}
-                                    variants={howItWorksListItemVariants}
-                                    className='flex items-center gap-[20px] my-[4rem]'
-                                >
-                                    <div className='rounded-lg bg-[#e0e4ed] w-[50px] h-[50px] flex items-center justify-center'>
-                                        <motion.img
-                                            src={feature.icon}
-                                            alt={feature.title}
-                                            className='w-[25px] h-[25px]'
-                                        />
-                                    </div>
-
-                                    <div className='flex flex-col items-start'>
-                                        <motion.h3 className='text-[#2f415b] text-[1.9rem] font-[900] leading-[1.1] text-start'>
-                                            {feature.title}
-                                        </motion.h3>
-                                        <motion.p className='text-[#2f415b] text-[1.5rem] font-[500] leading-[1.1] mt-3'>
-                                            {feature.description}
-                                        </motion.p>
-                                    </div>
-                                </motion.li>
+                                <ListItem
+                                    title={feature.title}
+                                    description={feature.description}
+                                    icon={feature.icon}
+                                />
                             ))}
                         </motion.ul>
                     </div>
@@ -179,7 +163,7 @@ const Features = () => {
                             variants={alertVariantLeft}
                         />
                         <Alert
-                            className='absolute bottom-[27%] right-[20%]'
+                            className='absolute bottom-[27%] right-[18%]'
                             icon={bellIcon}
                             iconBg='#ebf0f7'
                             title='You have a new payment'
