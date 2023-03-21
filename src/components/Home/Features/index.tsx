@@ -2,10 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import {
     shoeAnim2,
-    textContainerVariant,
     wordVariant,
     howItWorksListVariants,
-    howItWorksListItemVariants,
     guyAnim,
     girlAnim,
     phoneAnim,
@@ -26,7 +24,7 @@ import bellIcon from '../../../assets/images/bell.svg';
 import Circle from './Circle';
 import AnimatedText from '../../common/AnimatedText';
 import Alert from '../../common/Alert';
-import ListItem from './ListItem';
+import ListItem from '../../common/ListItem';
 
 const words = ['A', 'free', 'and', 'simple', 'way', 'to', 'share', 'your', 'wishlists'];
 
@@ -73,6 +71,7 @@ const Features = () => {
                                     title={feature.title}
                                     description={feature.description}
                                     icon={feature.icon}
+                                    descriptionClassName='text-[#2f415b] leading-[1.1rem]'
                                 />
                             ))}
                         </motion.ul>

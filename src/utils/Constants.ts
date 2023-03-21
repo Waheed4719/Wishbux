@@ -11,6 +11,7 @@ import HeartIcon from '../assets/images/heart.svg';
 import MoneyIcon from '../assets/images/money.svg';
 import MicrophoneIcon from '../assets/images/microphone.svg';
 import PeopleLockIcon from '../assets/images/people-lock.svg';
+import CheckIcon from '../assets/images/check.svg';
 
 export const benefitItems: CardPropType[] = [
     {
@@ -88,6 +89,26 @@ export const features: CardPropType[] = [
         title: 'Two way anonymity',
         description: 'Your privacy is our privacy',
         icon: PeopleLockIcon
+    }
+];
+
+export const earlyAccess: CardPropType[] = [
+    {
+        title: 'Reserve your user name',
+        description: 'No fees or hidden charges',
+        icon: CheckIcon
+    },
+    {
+        title: 'Enroll into our early access program',
+        description:
+            'That means you’ll always get access to our latest features before anyone else, including our mobile app launching later this year!',
+        icon: CheckIcon
+    },
+    {
+        title: '$100 guarantee within the first 30 days',
+        description:
+            'We guarantee you’ll make at least $100 from your wishlist in the first 30 days or we’ll give you $100.  Guaranteed',
+        icon: CheckIcon
     }
 ];
 
