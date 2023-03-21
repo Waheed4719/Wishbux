@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { howItWorksListItemVariants } from '../../../utils/Animations';
+import { howItWorksListItemVariants } from '../../utils/Animations';
 
 type ListItemProps = {
     title: string;
