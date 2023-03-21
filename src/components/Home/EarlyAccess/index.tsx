@@ -20,12 +20,12 @@ const EarlyAccess = () => {
 
     return (
         <section className='section-2 bg-[var(--bg-primary)] py-[100px] relative w-full'>
-            <div className='max-w-full w-[1310px] px-[3rem] lg:px-[5rem] mx-auto'>
+            <div className='max-w-full w-[1310px] px-[1.3rem] md:px-[3rem] lg:px-[5rem] mx-auto'>
                 <div className='mx-auto flex flex-col-reverse lg:flex-row gap-[4rem] lg:gap-0'>
-                    <div className='w-full bg-white px-[4rem] pb-[7.2rem] rounded-[1.7rem]'>
+                    <div className='w-full bg-white px-[2rem] md:px-[4rem] pb-[7.2rem] rounded-[1.7rem]'>
                         {' '}
                         <AnimatedCards />
-                        <div className='mx-auto flex flex-col-reverse lg:flex-row gap-[4rem]  lg:gap-0'>
+                        <div className='mx-auto flex flex-col lg:flex-row gap-[4rem]  lg:gap-0'>
                             <div className='w-full'>
                                 <div className='text-start mx-auto mb-[1rem]' ref={ref}>
                                     <h3 className='text-center lg:text-left text-[1.1rem] font-[500] text-[#c1aeb8] tracking-[2px]'>
@@ -52,6 +52,7 @@ const EarlyAccess = () => {
                                 >
                                     {earlyAccess.map((item) => (
                                         <ListItem
+                                            key={item.title}
                                             title={item.title}
                                             description={item.description}
                                             icon={item.icon}

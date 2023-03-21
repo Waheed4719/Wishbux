@@ -134,15 +134,15 @@ const Card = ({ image, index, domEntered }: Props) => (
             <p className='text-[0.8rem] md:text-[18px] text-left mt-2 font-regular'>$1830.00</p>
             <button
                 type='submit'
-                className='w-full h-[1.8rem] leading-[1.8rem] md:h-[unset] rounded-full bg-[#27b0e6] text-[0.6rem] md:text-[1.4rem] font-semibold text-white px-6 py-4 mt-2 md:mt-6 flex items-center justify-center'
+                className='w-full h-[1.8rem] leading-[1.8rem] md:h-[unset] rounded-full bg-[#27b0e6] text-[0.6rem] md:text-[1.4rem] font-semibold text-white md:px-6 md:py-4 mt-2 md:mt-6 flex items-center justify-center'
             >
                 Add to wish list
             </button>
         </div>
-        {index === 2 && (
+        {/* {index === 2 && (
             <>
                 <Alert
-                    className='absolute top-[25%] left-[-20%]'
+                    className='absolute top-[25%] left-[-20%] scale-50'
                     icon={dollarBlueIcon}
                     iconBg='#ebf0f7'
                     title='Account Balance'
@@ -151,7 +151,7 @@ const Card = ({ image, index, domEntered }: Props) => (
                 />
 
                 <Alert
-                    className='absolute bottom-[25%] right-[-20%]'
+                    className='absolute bottom-[25%] right-[-20%] scale-50'
                     icon={bellIcon}
                     iconBg='#f3faf1'
                     title='New Alert'
@@ -159,7 +159,7 @@ const Card = ({ image, index, domEntered }: Props) => (
                     variants={alertVariantRight}
                 />
             </>
-        )}
+        )} */}
     </motion.div>
 );
 

@@ -68,6 +68,7 @@ const Features = () => {
                         >
                             {features.map((feature) => (
                                 <ListItem
+                                    key={feature.title}
                                     title={feature.title}
                                     description={feature.description}
                                     icon={feature.icon}

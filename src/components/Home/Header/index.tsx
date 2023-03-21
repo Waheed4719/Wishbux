@@ -15,7 +15,7 @@ const Header = () => {
                 <nav className='text-[1.4rem] flex flex-1 justify-start gap-8'>
                     <ul className='flex'>
                         {headerItems.map((item) => (
-                            <li className='mr-[3.2rem]'>
+                            <li key={item.title} className='mr-[3.2rem]'>
                                 <a href={item.href}>{item.title}</a>
                             </li>
                         ))}

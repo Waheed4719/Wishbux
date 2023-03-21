@@ -7,6 +7,7 @@ const Drawer = () => (
             <ul>
                 {headerItems.map((item, index) => (
                     <li
+                        key={item.title}
                         className={`text-[2.6rem] mb-[2.4rem] text-left ${
                             index === 0 && 'text-[#27B0E6]'
                         }`}

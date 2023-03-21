@@ -21,9 +21,9 @@ const AnimatedCards = () => {
         }
     }, [isInView]);
     return (
-        <motion.div className='w-full flex relative z-10 top-[-14rem]' ref={ref}>
+        <motion.div className='w-full flex relative z-10 top-[-8rem] md:top-[-14rem]' ref={ref}>
             {images.map((image, i) => (
-                <Card image={image} index={i} domEntered={domEntered} />
+                <Card key={image} image={image} index={i} domEntered={domEntered} />
             ))}
         </motion.div>
     );
