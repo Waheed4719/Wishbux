@@ -50,7 +50,7 @@ const Hero = () => {
                 <div className='main-block__text'>
                     Receive cash gifts privately, securely and without any fees
                 </div>
-                <button type='submit' className='round-btn'>
+                <button type='submit' className='round-btn mt-[3.7rem]'>
                     Join the waiting list
                 </button>
 
@@ -66,7 +66,7 @@ const Hero = () => {
                             <p className='text-[14px] mt-2 font-regular'>$1830.00</p>
                             <button
                                 type='submit'
-                                className='w-full rounded-full bg-[#27b0e6] text-[1.4rem] font-semibold text-white px-6 py-4 mt-6'
+                                className='w-full  rounded-full bg-[#27b0e6] text-[1.4rem] font-semibold text-white px-6 py-4 mt-6'
                             >
                                 Add to wish list
                             </button>
