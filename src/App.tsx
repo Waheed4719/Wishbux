@@ -11,6 +11,7 @@ import EarlyAccess from './components/Home/EarlyAccess';
 
 export default () => (
     <div className='App'>
+        <Drawer />
         <Header />
         <Hero />
         <HowItWorks />
@@ -19,6 +20,5 @@ export default () => (
         <Reviews />
         <EarlyAccess />
         <Footer />
-        <Drawer />
     </div>
 );

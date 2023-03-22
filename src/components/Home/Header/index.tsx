@@ -7,7 +7,7 @@ const Header = () => {
 
     return (
         <header
-            className={`justify-between sticky top-0 w-full flex items-center z-10  transition-[background] duration-200 ${
+            className={`justify-between sticky top-0 w-full hidden md:flex items-center z-10  transition-[background] duration-200 ${
                 scrollY !== 0 ? 'bg-white py-[2.5rem]' : 'bg-transparent pt-[3.5rem] pb-[1.5rem]'
             }`}
         >

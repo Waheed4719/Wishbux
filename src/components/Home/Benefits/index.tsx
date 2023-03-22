@@ -17,7 +17,7 @@ const Benefits = () => {
         }
     }, [isInView]);
     return (
-        <section className='section-2 bg-white py-[100px] relative w-full'>
+        <section className='section-2 bg-white py-[100px] relative w-full' id='benefits'>
             <div className='max-w-full w-[1310px] px-[3rem] lg:px-[5rem] mx-auto'>
                 <div className='mx-auto flex flex-col gap-[4rem] mb-[4rem]'>
                     <div className='w-full'>

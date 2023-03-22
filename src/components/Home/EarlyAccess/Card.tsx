@@ -134,7 +134,7 @@ const Card = ({ image, index, domEntered }: Props) => (
             <p className='text-[0.8rem] md:text-[18px] text-left mt-2 font-regular'>$1830.00</p>
             <button
                 type='submit'
-                className='w-full h-[1.8rem] leading-[1.8rem] md:h-[unset] rounded-full bg-[#27b0e6] text-[0.6rem] md:text-[1.4rem] font-semibold text-white md:px-6 md:py-4 mt-2 md:mt-6 flex items-center justify-center'
+                className='w-full transition duration-[0.4s] h-[1.8rem] leading-[1.8rem] md:h-[unset] rounded-full bg-[#27b0e6] text-[0.6rem] md:text-[1.4rem] font-semibold text-white md:px-6 md:py-4 mt-2 md:mt-6 flex items-center justify-center'
             >
                 Add to wish list
             </button>
