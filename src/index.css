@@ -84,14 +84,6 @@ h1 {
     text-align: center;
 }
 
-.main-block__text {
-    margin-top: 3.1rem;
-    font-size: 2.1rem;
-    line-height: 100%;
-    text-align: center;
-    padding: 0 2.5rem;
-}
-
 .round-btn {
     background: #27b0e6;
     font-weight: 700;

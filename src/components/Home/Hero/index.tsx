@@ -36,7 +36,7 @@ const Hero = () => {
     return (
         <section className='section-1'>
             <div className='main-block'>
-                <h1>
+                <h1 className='text-[5.2rem] transition-all md:text-[7.2rem]'>
                     Turn your wishes <br />
                     <motion.span
                         variants={wordVariant}
@@ -47,7 +47,7 @@ const Hero = () => {
                         into cash
                     </motion.span>
                 </h1>
-                <div className='main-block__text'>
+                <div className='mt-[3.1rem] leading-[100%] text-[#272744] px-[2.5rem] text-[1.4rem] md:text-[2.1rem] '>
                     Receive cash gifts privately, securely and without any fees
                 </div>
                 <button type='submit' className='round-btn mt-[3.7rem]'>
