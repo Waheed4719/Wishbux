@@ -34,7 +34,7 @@ const Drawer = () => {
     return (
         <>
             <div
-                className={`w-full p-[2.5rem] flex justify-start sticky top-0 z-[97] ${
+                className={`md:hidden w-full p-[2.5rem] flex justify-start sticky top-0 z-[97] ${
                     scrollY !== 0
                         ? 'bg-white py-[2.5rem]'
                         : 'bg-transparent pt-[3.5rem] pb-[1.5rem]'
