@@ -24,7 +24,6 @@ const Drawer = () => {
     };
 
     useEffect(() => {
-        console.log('controls', controls);
         if (open) {
             controls.start('visible');
         } else {
@@ -83,7 +82,9 @@ const Drawer = () => {
                                     index === 0 && 'text-[#27B0E6]'
                                 }`}
                             >
-                                <a href={item.href}>{item.title}</a>
+                                <a onClick={() => setOpen(false)} href={item.href}>
+                                    {item.title}
+                                </a>
                             </li>
                         ))}
                     </ul>
