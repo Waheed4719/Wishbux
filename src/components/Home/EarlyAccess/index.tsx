@@ -26,7 +26,7 @@ const EarlyAccess = () => {
                         {' '}
                         <AnimatedCards />
                         <div className='mx-auto flex flex-col lg:flex-row gap-[4rem]  lg:gap-0'>
-                            <div className='w-full'>
+                            <div className='w-full md:pl-[3.5rem]'>
                                 <div className='text-start mx-auto mb-[1rem]' ref={ref}>
                                     <h3 className='text-center lg:text-left text-[1.1rem] font-[500] text-[#c1aeb8] tracking-[2px]'>
                                         GET EARLY ACCESS
@@ -42,6 +42,20 @@ const EarlyAccess = () => {
                                         domEntered={domEntered}
                                     />
                                 </h2>
+                                <div className='flex items-center gap-[1rem] mt-[4rem]'>
+                                    <div className='text-[1rem] md:text-[1.6rem] text-[rgba(39,39,68,0.7)]'>
+                                        wishbux.com/
+                                    </div>
+                                    <div className='flex flex-1 h-[4.7rem] md:h-[7.3rem] rounded-full items-center px-4 bg-[#edf0f6]'>
+                                        <input className='flex flex-1 bg-transparent px-2' />
+                                        <button
+                                            type='submit'
+                                            className='bg-[#27b0e6] text-[1.3rem] rounded-full h-[3.4rem] leading-[3.4rem] md:leading-[5.3rem] md:h-[5.3rem] font-bold text-white px-[1.5rem] md:px-[3rem]'
+                                        >
+                                            Sign up now
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className='relative w-full mx-auto before:block max-w-[55rem] md:pl-[6rem]'>

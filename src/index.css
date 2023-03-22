@@ -93,11 +93,6 @@ h1 {
 }
 
 .round-btn {
-    display: block;
-    margin: 5.1rem auto 0;
-    border: 0;
-    font-family: Satoshi, arial, sans-serif;
-    border: 0;
     background: #27b0e6;
     font-weight: 700;
     font-size: 1.3rem;
