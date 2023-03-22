@@ -42,20 +42,28 @@ const EarlyAccess = () => {
                                         domEntered={domEntered}
                                     />
                                 </h2>
-                                <div className='flex items-center gap-[1rem] mt-[4rem]'>
+                                <motion.div
+                                    className='flex items-center gap-[1rem] mt-[4rem]'
+                                    variants={{
+                                        hidden: { opacity: 0 },
+                                        visible: { opacity: 1, transition: { delay: 1 } }
+                                    }}
+                                    initial='hidden'
+                                    animate={domEntered ? 'visible' : ''}
+                                >
                                     <div className='text-[1rem] md:text-[1.6rem] text-[rgba(39,39,68,0.7)]'>
                                         wishbux.com/
                                     </div>
-                                    <div className='flex flex-1 h-[4.7rem] md:h-[7.3rem] rounded-full items-center px-4 bg-[#edf0f6]'>
-                                        <input className='flex flex-1 bg-transparent px-2' />
-                                        <button
+                                    <motion.div className='flex flex-1 h-[4.7rem] md:h-[7.3rem] rounded-full items-center px-4 bg-[#edf0f6]'>
+                                        <motion.input className='flex flex-1 bg-transparent px-2' />
+                                        <motion.button
                                             type='submit'
                                             className='bg-[#27b0e6] transition duration-[400ms] text-[1.3rem] rounded-full h-[3.4rem] leading-[3.4rem] md:leading-[5.3rem] md:h-[5.3rem] font-bold text-white px-[1.5rem] md:px-[3rem]'
                                         >
                                             Sign up now
-                                        </button>
-                                    </div>
-                                </div>
+                                        </motion.button>
+                                    </motion.div>
+                                </motion.div>
                             </div>
 
                             <div className='relative w-full mx-auto before:block max-w-[55rem] md:pl-[6rem]'>
