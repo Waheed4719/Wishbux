@@ -65,16 +65,6 @@ h1 {
     text-fill-color: transparent;
 }
 
-.main-block {
-    height: 1000px;
-    font-size: 100%;
-    width: 1000px;
-    max-width: 100%;
-    margin: 60px auto 0px auto;
-    z-index: 3;
-    position: relative;
-}
-
 h1 {
     color: #23344d;
     letter-spacing: -0.04em;
@@ -122,13 +112,6 @@ h1 {
 .circle {
     display: block;
     padding-top: 100%;
-}
-
-.main-block__images-wrap {
-    width: 32.2rem;
-    margin: 10.5rem auto 8rem;
-    position: relative;
-    text-align: left;
 }
 
 .main-block__images {

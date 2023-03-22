@@ -35,14 +35,14 @@ const Hero = () => {
 
     return (
         <section className='section-1'>
-            <div className='main-block'>
-                <h1 className='text-[5.2rem] transition-all md:text-[7.2rem]'>
+            <div className='h-[800px] md:h-[1000px] text-[100%] max-w-full w-[1000px] relative z-[3] mx-auto mt-[6rem]'>
+                <h1 className='text-[4.6rem] transition-all md:text-[7.2rem]'>
                     Turn your wishes <br />
                     <motion.span
                         variants={wordVariant}
                         initial='hidden'
                         animate='visible'
-                        className='coloured transition-all leading-[1.1] text-[5.2rem] md:text-[7.2rem] tracking-[-2.5px] font-[900]'
+                        className='coloured transition-all leading-[1.1]  tracking-[-2.5px] font-[900]'
                     >
                         into cash
                     </motion.span>
@@ -54,7 +54,7 @@ const Hero = () => {
                     Join the waiting list
                 </button>
 
-                <div className='main-block__images-wrap'>
+                <div className='scale-[0.7] md:scale-100 w-[32.2rem] mt-[10.5rem] mx-auto mb-[8rem] relative text-left'>
                     <div className='main-block__images relative z-[4]'>
                         <motion.div className='h-[198px]' ref={ref}>
                             <img className='w-full' src={bag} alt='bag' loading='eager' />
