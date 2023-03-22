@@ -28,7 +28,7 @@ const Header = () => {
                 <div className='flex flex-1 justify-end items-center'>
                     <button
                         type='submit'
-                        className='rounded-full bg-[#27b0e6] text-[1.1rem] font-semibold text-white px-10 py-4'
+                        className='rounded-full transition duration-[0.4s] bg-[#27b0e6] text-[1.1rem] font-semibold text-white px-10 py-4'
                     >
                         Join the waiting list
                     </button>

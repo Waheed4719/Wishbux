@@ -88,6 +88,12 @@ const Drawer = () => {
                             </li>
                         ))}
                     </ul>
+                    <button
+                        type='submit'
+                        className='rounded-full transition duration-[0.4s] bg-[#27b0e6] text-[1.4rem] font-semibold text-white px-10 py-4'
+                    >
+                        Join the waiting list
+                    </button>
                 </nav>
             </motion.div>
         </>

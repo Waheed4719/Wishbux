@@ -66,7 +66,7 @@ const Hero = () => {
                             <p className='text-[14px] mt-2 font-regular'>$1830.00</p>
                             <button
                                 type='submit'
-                                className='w-full  rounded-full bg-[#27b0e6] text-[1.4rem] font-semibold text-white px-6 py-4 mt-6'
+                                className='w-full transition duration-[0.4s] rounded-full bg-[#27b0e6] text-[1.4rem] font-semibold text-white px-6 py-4 mt-6'
                             >
                                 Add to wish list
                             </button>

@@ -50,7 +50,7 @@ const EarlyAccess = () => {
                                         <input className='flex flex-1 bg-transparent px-2' />
                                         <button
                                             type='submit'
-                                            className='bg-[#27b0e6] text-[1.3rem] rounded-full h-[3.4rem] leading-[3.4rem] md:leading-[5.3rem] md:h-[5.3rem] font-bold text-white px-[1.5rem] md:px-[3rem]'
+                                            className='bg-[#27b0e6] transition duration-[400ms] text-[1.3rem] rounded-full h-[3.4rem] leading-[3.4rem] md:leading-[5.3rem] md:h-[5.3rem] font-bold text-white px-[1.5rem] md:px-[3rem]'
                                         >
                                             Sign up now
                                         </button>
