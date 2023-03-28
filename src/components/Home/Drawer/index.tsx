@@ -34,7 +34,7 @@ const Drawer = () => {
     return (
         <>
             <div
-                className={`md:hidden w-full p-[2.5rem] flex justify-start sticky top-0 z-[97] ${
+                className={`xl:hidden w-full p-[2.5rem] flex justify-start sticky top-0 z-[97] ${
                     scrollY !== 0
                         ? 'bg-white py-[2.5rem]'
                         : 'bg-transparent pt-[3.5rem] pb-[1.5rem]'
@@ -62,7 +62,7 @@ const Drawer = () => {
                 variants={drawerVariant}
                 initial='hidden'
                 animate={controls}
-                className='bg-white shadow-xl w-[calc(100vw-4rem)] fixed top-0 bottom-0 z-[100] left-[0]'
+                className='bg-white shadow-xl w-[calc(100vw-4rem)]  max-w-[400px] fixed top-0 bottom-0 z-[100] left-[0]'
             >
                 <div className='px-[5.4rem] pt-[3.7rem] flex justify-end'>
                     <button
